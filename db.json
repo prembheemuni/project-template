@@ -1,0 +1,150 @@
+{
+  "login": {
+    "token": "token_from_server"
+  },
+  "products": [
+    {
+      "productId": 1,
+      "title": "Wireless Bluetooth Headphones",
+      "description": "Enjoy immersive audio experience with these wireless Bluetooth headphones. Perfect for music lovers and audiophiles.",
+      "price": 49.99,
+      "rating": 4.7,
+      "discount": 0.1
+    },
+    {
+      "productId": 2,
+      "title": "Smartphone Charging Dock",
+      "description": "Keep your smartphone charged and organized with this sleek charging dock. Compatible with most smartphones.",
+      "price": 19.99,
+      "rating": 4.5,
+      "discount": 0.15
+    },
+    {
+      "productId": 3,
+      "title": "Fitness Tracker Watch",
+      "description": "Track your daily activities, monitor your heart rate, and stay fit with this advanced fitness tracker watch.",
+      "price": 79.99,
+      "rating": 4.8,
+      "discount": 0.2
+    },
+    {
+      "productId": 4,
+      "title": "Portable Bluetooth Speaker",
+      "description": "Bring the party anywhere with this portable Bluetooth speaker. Enjoy high-quality sound and long battery life.",
+      "price": 39.99,
+      "rating": 4.6,
+      "discount": 0.1
+    },
+    {
+      "productId": 5,
+      "title": "Wireless Charging Pad",
+      "description": "Charge your smartphone wirelessly with this convenient charging pad. Compatible with Qi-enabled devices.",
+      "price": 29.99,
+      "rating": 4.3,
+      "discount": 0.05
+    },
+    {
+      "productId": 6,
+      "title": "Digital Camera Bundle",
+      "description": "Capture every moment in stunning detail with this digital camera bundle. Includes camera, lenses, and accessories.",
+      "price": 299.99,
+      "rating": 4.9,
+      "discount": 0.25
+    },
+    {
+      "productId": 7,
+      "title": "Gaming Mouse and Keyboard Set",
+      "description": "Enhance your gaming experience with this high-performance mouse and keyboard set. Designed for gamers.",
+      "price": 69.99,
+      "rating": 4.7,
+      "discount": 0.1
+    },
+    {
+      "productId": 8,
+      "title": "Home Security Camera System",
+      "description": "Protect your home with this advanced security camera system. Monitor your property from anywhere.",
+      "price": 149.99,
+      "rating": 4.6,
+      "discount": 0.15
+    },
+    {
+      "productId": 9,
+      "title": "Wireless Ergonomic Keyboard",
+      "description": "Work comfortably and efficiently with this wireless ergonomic keyboard. Designed for improved typing experience.",
+      "price": 59.99,
+      "rating": 4.4,
+      "discount": 0.1
+    },
+    {
+      "productId": 10,
+      "title": "External Hard Drive",
+      "description": "Store and backup your files securely with this high-capacity external hard drive. Perfect for storing photos, videos, and documents.",
+      "price": 89.99,
+      "rating": 4.5,
+      "discount": 0.2
+    },
+    {
+      "id": "c0d2",
+      "productId": "23333",
+      "title": "New Product",
+      "description": "Description",
+      "price": "34",
+      "rating": "4",
+      "discount": "0.6"
+    },
+    {
+      "id": "104a",
+      "productId": "23333",
+      "title": "New Product",
+      "description": "Description",
+      "price": "34",
+      "rating": "4",
+      "discount": "0.6"
+    },
+    {
+      "id": "324b",
+      "productId": "Prem Kumar",
+      "title": "Prem Kumar",
+      "description": "Prem",
+      "price": "34",
+      "rating": "2",
+      "discount": "0.9"
+    },
+    {
+      "id": "da2f",
+      "productId": "dummy product",
+      "title": "Prem Kumar",
+      "description": "this is of m=dummy",
+      "price": "2",
+      "rating": "9",
+      "discount": "3"
+    },
+    {
+      "id": "5a6f",
+      "productId": "dummy product",
+      "title": "Bheemubni Prem Kumar",
+      "description": "this is of m=dummy",
+      "price": "2",
+      "rating": "9",
+      "discount": "3"
+    },
+    {
+      "id": "02f2",
+      "productId": "dummy product",
+      "title": "Bheemubni Prem Kumar",
+      "description": "this is of m=dummy",
+      "price": "",
+      "rating": "9",
+      "discount": "3"
+    },
+    {
+      "id": "70c1",
+      "productId": "kopek",
+      "title": "lopoop",
+      "description": "plopp",
+      "price": 0,
+      "rating": 0,
+      "discount": 0
+    }
+  ]
+}
