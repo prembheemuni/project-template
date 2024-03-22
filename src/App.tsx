@@ -12,10 +12,12 @@ import Offers from "./pages/Offers/Offers";
 import Payment from "./pages/Payment/Payment";
 import ProtectedRoute from "./layouts/ProtectedRoute";
 import ErrorBoundary from "./layouts/ErrorBoundary";
+import { useUserSelector } from "./redux/reducers/loginSlice";
 
 const App: React.FC = () => {
   const location = useLocation();
   console.log(location, "a loc");
+  console.log(useUserSelector());
 
   const queryClient = new QueryClient();
 

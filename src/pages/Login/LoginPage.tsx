@@ -8,7 +8,9 @@ import { loginConstants } from "../../constants/constants";
 import Input from "../../components/common/Input/Input";
 import Button from "../../components/common/Button/Button";
 import { useForm, Controller } from "react-hook-form";
-import ErrorSpan from "../../components/common/Error/ErrorSpan";
+import { useAppDispatch } from "../../redux/hooks";
+import { loginUser } from "../../redux/reducers/loginSlice";
+import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
   const {
@@ -47,9 +49,11 @@ const LoginPage = () => {
     }
   }, [data]);
 
+  const dispatch = useDispatch();
+
   const onSubmit = (data: formData) => {
     doFetch(loginConstants.loginUrl);
-    setContextUserName(data.username);
+    dispatch(loginUser(data.username));
 
     console.log(data, "from form");
   };
@@ -83,7 +87,7 @@ const LoginPage = () => {
                 placeholder="Enter Username"
                 value={value}
                 onChange={onChange}
-                errorMessage={errors?.username?.message ?? ""}
+                errormessage={errors?.username?.message ?? ""}
               />
             );
           }}
@@ -105,7 +109,7 @@ const LoginPage = () => {
                 placeholder="Enter password"
                 value={value}
                 onChange={onChange}
-                errorMessage={errors?.password?.message ?? ""}
+                errormessage={errors?.password?.message ?? ""}
               />
             );
           }}

@@ -9,6 +9,7 @@ export const useReactQuery = () => {
       queryKey: [QUERY_KEY],
       queryFn: queryFn,
       enabled: enabled,
+      refetchOnWindowFocus: false,
     });
   };
 

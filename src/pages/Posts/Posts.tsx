@@ -111,7 +111,7 @@ const Posts = () => {
           <h3>Loading...</h3>
         ) : (
           <div>
-            {data &&
+            {data.data &&
               data.data.map((e: any, i: number) => (
                 <div key={i}>
                   <h4>{e.title}</h4>
@@ -139,7 +139,7 @@ const Posts = () => {
                       value={value}
                       onChange={onChange}
                       placeholder={each.placeholder}
-                      errorMessage={
+                      errormessage={
                         errors[each.name as keyof FieldErrors<ProductForm>]
                           ?.message ?? ""
                       }

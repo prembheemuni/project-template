@@ -1,9 +1,9 @@
 interface ErrorProps {
-  errorMessage: string;
+  errormessage: string;
 }
 
-const ErrorSpan = ({ errorMessage }: ErrorProps) => {
-  return <div style={{ fontSize: "9px", color: "red" }}>{errorMessage}</div>;
+const ErrorSpan = ({ errormessage }: ErrorProps) => {
+  return <div style={{ fontSize: "9px", color: "red" }}>{errormessage}</div>;
 };
 
 export default ErrorSpan;

@@ -146,5 +146,34 @@
       "rating": 0,
       "discount": 0
     }
+  ],
+  "offers": [
+    {
+      "id": 1,
+      "name": "50% Off on Shoes",
+      "description": "Get 50% off on all shoes. Limited time offer.",
+      "discount": "50%",
+      "valid_until": "2024-04-30",
+      "location": "Online",
+      "category": "Fashion"
+    },
+    {
+      "id": 2,
+      "name": "Buy One Get One Free on Burgers",
+      "description": "Buy one burger and get another one for free. Valid only on weekdays.",
+      "discount": "BOGO",
+      "valid_until": "2024-05-15",
+      "location": "Restaurant X",
+      "category": "Food"
+    },
+    {
+      "id": 3,
+      "name": "20% Off on Electronics",
+      "description": "Get 20% off on all electronic items. Limited stock available.",
+      "discount": "20%",
+      "valid_until": "2024-03-31",
+      "location": "Tech Store Y",
+      "category": "Electronics"
+    }
   ]
 }

@@ -1,10 +1,10 @@
-import { useAuthContextValue } from "../contexts/AuthContext";
 import { Outlet, Navigate, useLocation } from "react-router-dom";
+import { useUserSelector } from "../redux/reducers/loginSlice";
 
 const ProtectedRoute = () => {
-  const { auth } = useAuthContextValue();
+  const userData = useUserSelector();
   const location = useLocation();
-  return auth?.userName && auth?.userName != "" ? (
+  return userData.isAuthenticated ? (
     <Outlet />
   ) : (
     <Navigate to="/" state={{ path: location.pathname }} />

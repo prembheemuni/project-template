@@ -5,7 +5,7 @@ interface InputProps {
   placeholder: string;
   value: any;
   onChange: any;
-  errorMessage: string;
+  errormessage: string;
 }
 
 const Input = (props: InputProps) => {
@@ -15,7 +15,7 @@ const Input = (props: InputProps) => {
         {...props}
         style={{ padding: "10px", marginRight: "10px", marginBottom: "10px" }}
       />
-      {props.errorMessage && <ErrorSpan errorMessage={props.errorMessage} />}
+      {props.errormessage && <ErrorSpan errormessage={props.errormessage} />}
     </div>
   );
 };
