@@ -7,7 +7,7 @@ on:
   
 jobs:
   build: 
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
 
     env:
       CLIENT_WORKING_DIR : ./client
