@@ -1,7 +1,11 @@
 export const loginConstants = {
-  loginUrl: "login",
+  loginUrl: "api/login",
 };
 
 export const postConstants = {
-  postUrl: "posts",
+  productsUrl: "api/products",
+};
+
+export const offerConstants = {
+  offersUrl: "api/offers",
 };

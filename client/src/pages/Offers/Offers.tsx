@@ -21,14 +21,12 @@ const Offers = () => {
     dispatch(getOffers());
   }, []);
 
-  console.log(data, "as data");
-
   return (
     <div>
       <h2 style={{ color: "blue", textDecoration: "underline" }}>Offers</h2>
       <ul>
         {data.length &&
-          data.map((offer: Offer) => (
+          data.map((offer: any) => (
             <li key={offer.id} style={{ marginBottom: "20px" }}>
               <h3>{offer.name}</h3>
               <p style={{ fontWeight: "bold" }}>
