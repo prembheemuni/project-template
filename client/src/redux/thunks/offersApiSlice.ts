@@ -30,7 +30,7 @@ const initialState = {
 
 // this getOffers itselt behave like a slice and it provides 3 cases fullfilled and pending and success.
 // these there can be accessed by the other slice in the extra reducers
-export const getOffers = createAsyncThunk("offers/api", async (thunkAPI) => {
+export const getOffers = createAsyncThunk("offers/api", async (_thunkAPI) => {
   const data: AxiosResponse<Resp> = await Axios.get<Resp>(
     offerConstants.offersUrl
   );

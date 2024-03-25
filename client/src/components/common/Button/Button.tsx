@@ -4,7 +4,7 @@ interface ButtonProps {
   clickFunc?: any;
   type?: "submit" | "button" | "reset";
 }
-const Button = ({ showText, clickFunc, type }: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ showText, clickFunc, type }) => {
   return (
     <button
       onClick={clickFunc}

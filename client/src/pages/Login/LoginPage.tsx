@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { setItemInLocalStorage } from "../../services/localStorageService";
 import { QueryResult, formData } from "./types";
-import { useAuthContextValue } from "../../contexts/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { loginConstants } from "../../constants/constants";
 import Input from "../../components/common/Input/Input";
 import Button from "../../components/common/Button/Button";
 import { useForm, Controller } from "react-hook-form";
-import { useAppDispatch } from "../../redux/hooks";
 import { loginUser } from "../../redux/reducers/loginSlice";
 import { useDispatch } from "react-redux";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   const {
     handleSubmit,
     control,
@@ -24,13 +22,10 @@ const LoginPage = () => {
     },
   });
 
-  const value = useAuthContextValue();
-  const { setUsername: setContextUserName } = value;
-
   const location = useLocation();
   const navigateTo = useNavigate();
 
-  const { data, doFetch, loading }: QueryResult = useFetch();
+  const { data, doFetch }: QueryResult = useFetch();
 
   const handleNavigation = () => {
     if (location.state === null) {

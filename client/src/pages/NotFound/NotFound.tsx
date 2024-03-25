@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const goBack = () =>

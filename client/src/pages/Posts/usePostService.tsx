@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { useReactQuery } from "../../hooks/useReactQuery";
 import Axios from "../../services/apiClient";
 import { postConstants } from "../../constants/constants";
 
 const usePostService = () => {
-  const [posts, setPosts] = useState([]);
-
   const allPostQueryKey = "Post";
 
   const { useGetQuery, useMutationQuery } = useReactQuery();

@@ -2,7 +2,7 @@ import React from "react";
 import AuthContext from "./contexts/AuthContext";
 import LoginPage from "./pages/Login/LoginPage";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import HeaderLayout from "./layouts/HeaderLayout";
