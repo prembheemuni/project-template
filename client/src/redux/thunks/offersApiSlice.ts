@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import Axios from "../../services/apiClient";
 import { useAppSelector } from "../hooks";
 import { AxiosResponse } from "axios";
+import { offerConstants } from "../../constants/constants";
 
 interface Offer {
   id: number;
@@ -18,6 +19,10 @@ interface OfferState {
   loading: "idle" | "pending" | "succeeded" | "failed";
 }
 
+interface Resp {
+  offers: Offer[];
+}
+
 const initialState = {
   data: [],
   loading: "idle",
@@ -25,8 +30,10 @@ const initialState = {
 
 // this getOffers itselt behave like a slice and it provides 3 cases fullfilled and pending and success.
 // these there can be accessed by the other slice in the extra reducers
-export const getOffers = createAsyncThunk("offers/api", async (thunkAPI) => {
-  const data: AxiosResponse<Offer[]> = await Axios.get<Offer[]>("/offers");
+export const getOffers = createAsyncThunk("offers/api", async (_thunkAPI) => {
+  const data: AxiosResponse<Resp> = await Axios.get<Resp>(
+    offerConstants.offersUrl
+  );
   return data;
 });
 
@@ -41,7 +48,7 @@ export const offersSlice = createSlice({
       })
       .addCase(getOffers.fulfilled, (state, action) => {
         state.loading = "succeeded";
-        state.data = action.payload.data;
+        state.data = action.payload.data.offers;
       })
       .addCase(getOffers.rejected, (state) => {
         state.loading = "failed";
@@ -49,4 +56,4 @@ export const offersSlice = createSlice({
   },
 });
 
-export const getOffersData = () => useAppSelector((state) => state.offers);
+export const useGetOffersData = () => useAppSelector((state) => state.offers);

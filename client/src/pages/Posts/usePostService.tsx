@@ -1,28 +1,26 @@
-import { useState } from "react";
 import { useReactQuery } from "../../hooks/useReactQuery";
 import Axios from "../../services/apiClient";
+import { postConstants } from "../../constants/constants";
 
 const usePostService = () => {
-  const [posts, setPosts] = useState([]);
-
   const allPostQueryKey = "Post";
 
   const { useGetQuery, useMutationQuery } = useReactQuery();
 
-  const createPost = () => {
+  const useCreatePost = () => {
     return useMutationQuery(allPostQueryKey, async (body: any) =>
-      Axios.post("products", body)
+      Axios.post(postConstants.productsUrl, body)
     );
   };
-  const getAllPosts = () => {
+  const useGetAllPosts = () => {
     return useGetQuery(
       allPostQueryKey,
-      async () => Axios.get("products"),
+      async () => Axios.get(postConstants.productsUrl),
       true
     );
   };
 
-  return { getAllPosts, createPost };
+  return { useGetAllPosts, useCreatePost };
 };
 
 export default usePostService;

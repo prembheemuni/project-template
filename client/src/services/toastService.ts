@@ -18,9 +18,11 @@ const showWarnToast = (msg: string) => {
   toast.warn(msg, positionCenter);
 };
 
-export default {
+const options = {
   showSuccessToast,
   showErrorToast,
   showInfoToast,
   showWarnToast,
 };
+
+export default options;

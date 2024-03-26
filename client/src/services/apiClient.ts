@@ -1,9 +1,8 @@
 import axios from "axios";
-import { apiConstants } from "../constants/apiContants";
 import toastService from "./toastService";
 
 const Axios = axios.create({
-  baseURL: apiConstants.baseUrl,
+  // baseURL: apiConstants.baseUrl,
   headers: { "Content-Type": "application/json" },
 });
 

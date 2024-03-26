@@ -80,9 +80,10 @@ const formFields = [
 ];
 
 const Posts = () => {
-  const { getAllPosts, createPost } = usePostService();
-  const { data, isLoading }: any = getAllPosts();
-  const mutation = createPost();
+  const { useGetAllPosts, useCreatePost } = usePostService();
+  const { data, isLoading }: any = useGetAllPosts();
+  console.log(data, "as product data");
+  const mutation = useCreatePost();
   const {
     control,
     handleSubmit,
@@ -111,8 +112,8 @@ const Posts = () => {
           <h3>Loading...</h3>
         ) : (
           <div>
-            {data.data &&
-              data.data.map((e: any, i: number) => (
+            {data.data.products &&
+              data.data.products.map((e: any, i: number) => (
                 <div key={i}>
                   <h4>{e.title}</h4>
                 </div>

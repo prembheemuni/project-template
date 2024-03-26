@@ -1,9 +1,10 @@
+import React from "react";
 interface ButtonProps {
   showText: string;
   clickFunc?: any;
   type?: "submit" | "button" | "reset";
 }
-const Button = ({ showText, clickFunc, type }: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ showText, clickFunc, type }) => {
   return (
     <button
       onClick={clickFunc}

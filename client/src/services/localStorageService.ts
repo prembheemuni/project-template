@@ -4,12 +4,12 @@ export const setItemInLocalStorage = (key: string, value: any) => {
 
 export const getItemInLocalStorage = (key: string) => {
   const value = localStorage.getItem(key);
-  if (value != null && value != "undefined" && value != undefined)
+  if (value !== null && value !== "undefined" && value !== undefined)
     return JSON.parse(value);
   return "";
 };
 
 export const removeItemInLocalStorage = (key: string) => {
   const value = localStorage.getItem(key);
-  if (value != null && value != undefined) localStorage.removeItem(key);
+  if (value !== null && value !== undefined) localStorage.removeItem(key);
 };
