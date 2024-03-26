@@ -41,6 +41,7 @@ React Query:
 
 React HookForm:
 
+
 Error Boundary:
 
 Redux toolkit:
@@ -53,15 +54,6 @@ Environment variables:
 --> similarly .env.development.local has high priority when app running in local and it will be ignored by gitignore.
 --> .env loading in call cases. .env.local loaded in all cases and ignored by git. .env[mode] loaded in specific mode, .env[mode].local loaded in specific mode and ignored by git
 --> import.meta.env.MODE gives you MODE. import.meta.env.PROD and DEV gives you boolean.
-
-Proxy:
---> we can proxy requests through package.json and vite config.
---> generally we do proxy to avoid cors issue.
---> proxy is only used in developement server.
---> because when app is deployed both frontend and backend will be running in the same url.
-
-Deployement:
---> There are many ways to deploy our apps, one of the way is to build react app, copy dist to backend app, serve static files using express.
 
 Json Server
 --> It can be used as a server.

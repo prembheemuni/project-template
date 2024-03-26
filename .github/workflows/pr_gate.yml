@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      CLIENT_WORKING_DIR : ./client
+      CLIENT_WORKING_DIR : ./
     
     steps:
     - name: Checkout code
