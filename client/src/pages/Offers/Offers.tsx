@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { getOffers, getOffersData } from "../../redux/thunks/offersApiSlice";
+import { getOffers, useGetOffersData } from "../../redux/thunks/offersApiSlice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../redux/store";
 
@@ -14,7 +14,7 @@ import { AppDispatch } from "../../redux/store";
 // }
 
 const Offers = () => {
-  const { data } = getOffersData();
+  const { data } = useGetOffersData();
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {

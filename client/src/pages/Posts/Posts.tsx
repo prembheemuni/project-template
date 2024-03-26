@@ -80,10 +80,10 @@ const formFields = [
 ];
 
 const Posts = () => {
-  const { getAllPosts, createPost } = usePostService();
-  const { data, isLoading }: any = getAllPosts();
+  const { useGetAllPosts, useCreatePost } = usePostService();
+  const { data, isLoading }: any = useGetAllPosts();
   console.log(data, "as product data");
-  const mutation = createPost();
+  const mutation = useCreatePost();
   const {
     control,
     handleSubmit,

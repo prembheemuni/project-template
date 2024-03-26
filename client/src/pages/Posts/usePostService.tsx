@@ -7,12 +7,12 @@ const usePostService = () => {
 
   const { useGetQuery, useMutationQuery } = useReactQuery();
 
-  const createPost = () => {
+  const useCreatePost = () => {
     return useMutationQuery(allPostQueryKey, async (body: any) =>
       Axios.post(postConstants.productsUrl, body)
     );
   };
-  const getAllPosts = () => {
+  const useGetAllPosts = () => {
     return useGetQuery(
       allPostQueryKey,
       async () => Axios.get(postConstants.productsUrl),
@@ -20,7 +20,7 @@ const usePostService = () => {
     );
   };
 
-  return { getAllPosts, createPost };
+  return { useGetAllPosts, useCreatePost };
 };
 
 export default usePostService;

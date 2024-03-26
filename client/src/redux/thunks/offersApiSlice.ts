@@ -56,4 +56,4 @@ export const offersSlice = createSlice({
   },
 });
 
-export const getOffersData = () => useAppSelector((state) => state.offers);
+export const useGetOffersData = () => useAppSelector((state) => state.offers);

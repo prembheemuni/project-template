@@ -3,8 +3,6 @@ module.exports = {
   env: { browser: true, es2020: true, jest : true },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
     "react-app", "react-app/jest"
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -16,5 +14,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'no-unused-vars' : 'off', 
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   },
 }
