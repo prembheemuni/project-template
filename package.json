@@ -16,6 +16,7 @@
     "json-server": "json-server --watch db.json --port 3030",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
