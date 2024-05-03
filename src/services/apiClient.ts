@@ -6,6 +6,16 @@ const Axios = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
+const fetchNewToken = async () => {
+  try{
+    const response = await Axios.get("/refresh");
+    return response;
+    
+  }catch(error){
+    return error
+  }
+}
+
 Axios.interceptors.response.use(
   (response) => {
     toastService.showSuccessToast("Success!");
@@ -28,5 +38,24 @@ Axios.interceptors.request.use(
   },
   (error) => error
 );
+
+// Axios.interceptors.response.use(
+//   (config) => {
+//     return config;
+//   },
+//   async (error) => {
+//     const prevRequest = error?.config
+//     if(error?.response?.status === 403 && !prevRequest?.sent){
+//       prevRequest.sent = true
+//       const newToken = await fetchNewToken();
+//       prevRequest.headers['Authorization'] = `Bearer ${newToken}`;
+//       return Axios(prevRequest)
+//     }
+//     else{
+//       return Promise.reject(error);
+//     }
+    
+//   }
+// );
 
 export default Axios;
